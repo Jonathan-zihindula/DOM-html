@@ -1,5 +1,8 @@
-var b = document.body;
-var div = b.childNodes[3];
-var p1 = div.childNodes[1];
-var text = p1.childNodes[0].nodeValue;
-alert(text);
+var p2 = document.querySelectorAll('.para')[1];
+var first = p2.firstChild;
+var last = p2.lastChild;
+var inner1 = first.nodeValue;
+var inner2 = last.innerHTML;
+
+alert('the content of first child : ' + inner1 + 
+        '\nthe content of last child : ' + inner2);
