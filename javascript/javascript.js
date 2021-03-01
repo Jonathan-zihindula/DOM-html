@@ -1,9 +1,4 @@
-var titredepage = document.title;
-var page = document.body;
-var lien = document.links;
+var title = document.getElementById('gros_titre');
+var parent = document.body;
 
-alert('contenue de titre page : ' + titredepage + 
-        '\ncontenue de notre page :  ' + page +
-        '\ncontenue de lien : ' + lien[0] );
-
-        // chapiter 35 , suite 36
+parent.removeChild(title);
