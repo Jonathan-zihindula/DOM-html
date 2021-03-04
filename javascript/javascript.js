@@ -1,28 +1,24 @@
-var p1 = document.querySelector('p');
+var div1 = document.getElementById('div1');
+var p1 = document.getElementById('p1');
+var body = document.body;
+var strong = document.querySelector('strong');
+p1.addEventListener('click',CP1,true);
+strong.addEventListener('click',CS,true);
 
-p1.addEventListener('mouseover',Function1);
-p1.addEventListener('mousedown',Function2);
-p1.addEventListener('mouseout',Reset1);
-p1.addEventListener('mouseup',Reset2);
+function CP1 (){
+    alert('capt paragraphe');
+}
+function CS (){
+    alert('capt strong');
+}
 
-function Function1(){
-    this.innerHTML = "click me now";
-    this.style.backgroundColor = "orange";
+div1.addEventListener('click',BD1);
+body.addEventListener('click',BB);
+
+function BD1 (){
+    alert('bouillonnement div')
 }
-function Function2(){
-    this.innerHTML = "congratilation";
-    this.style.color = "#26C";
-    this.style.fontWeight = 'bold';
-    this.style.fontSize = '24px';
-    
-}
-function Reset1(){
-    this.innerHTML = "click me ";
-    this.style.backgroundColor = "";
-}
-function Reset2(){
-    this.innerHTML = 'pass on me ';
-    this.style.color = '';
-    this.style.fontWeight = '';
-    this.style.fontSize = '';
+
+function BB (){
+    alert('bouillonnement body');
 }
