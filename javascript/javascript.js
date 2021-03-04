@@ -3,3 +3,4 @@
 
  var div = title.nextSibling.nextSibling;
  div.innerHTML = '<p>div all amended</p>';
+//  event in JS
