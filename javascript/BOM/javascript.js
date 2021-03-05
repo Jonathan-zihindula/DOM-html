@@ -1,17 +1,9 @@
-var ouvrir = document.getElementById('ouvrir');
-var fermer = document.getElementById('fermer');
-var modifier = document.getElementById('modifier');
-var fenetre = "";
-ouvrir.addEventListener('click',fOuvrir);
-modifier.addEventListener('click',Modifier);
-fermer.addEventListener('click',fFermer);
+var hauteur = screen.height;
+var hauteurDispo = screen.availHeight;
+var reso = screen.pixelDepth;
 
-function fOuvrir() {
-    fenetre = window.open('http://pierre-giraud.com','_blankl','width  = 500');
-}
-function fFermer() {
-    fenetre.close();
-}
-function Modifier() {
-    fenetre.resizeTo(300,300);
-}
+var para = document.querySelector('p');
+para.innerHTML =
+        'hauteur de l\'ecrcan ' + hauteur + 
+         '<br>Hauteur disponible ' + hauteurDispo + 
+         '<br>Resolution de l\'ecran : ' + reso + 'bits/px';
