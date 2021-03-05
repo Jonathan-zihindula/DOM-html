@@ -1,9 +1,15 @@
-var hauteur = screen.height;
-var hauteurDispo = screen.availHeight;
-var reso = screen.pixelDepth;
-
 var para = document.querySelector('p');
-para.innerHTML =
-        'hauteur de l\'ecrcan ' + hauteur + 
-         '<br>Hauteur disponible ' + hauteurDispo + 
-         '<br>Resolution de l\'ecran : ' + reso + 'bits/px';
+var loc = navigator.geolocation;
+(function(){
+    if (loc){
+        loc.getCurrentPosition(coordonnes);
+    }
+    else {
+        para.innerHTML = 'localisation non disponible ';
+    }
+})();
+function coordonnes(x){
+    para.innerHTML = 
+    'latitude: ' + x.coords.latitude +
+    '<br>Longitude : ' + x.coords.longitude;
+}
