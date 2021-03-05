@@ -1,12 +1,12 @@
-var div1 = document.getElementById('div1');
-var p1 = document.getElementById('p1');
+var ouvrir = document.getElementById('ouvrir');
+var fermer = document.getElementById('fermer');
+var fenetre = "";
+ouvrir.addEventListener('click',fOuvrir);
+fermer.addEventListener('click',fFermer);
 
-div1.addEventListener('click',textD,true);
-p1.addEventListener('click',textP,true);
-function textD(e){
-  e.priventDefault();
+function fOuvrir() {
+    fenetre = window.open('http://pierre-giraud.com','_blankl','width  = 500');
 }
-
-function textP(){
-    alert('la methode privent ne declenche pas la propagation ');
+function fFermer() {
+    fenetre.close();
 }
